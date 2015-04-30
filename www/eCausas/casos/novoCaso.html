@@ -1,0 +1,26 @@
+<ion-view view-title="Escreva sua historia">
+    <ion-content>
+        <form name="novoCasoForm" ng-submit="cadastrarCaso()" novalidate form-manager>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" ng-model="novoCaso.Reu" placeholder="Quem voc&ecirc; deseja processar" ng-minlength="2" required>
+                </label>
+                <br>
+		<label class="item item-input">
+                    <input type="text" ng-model="novoCaso.Titulo" placeholder="T&iacute;tulo" ng-minlength="10" required>
+                </label>
+                <br>
+                <label class="item item-input">
+                    <textarea rows="10" ng-model="novoCaso.Descricao" placeholder="Escreva aqui toda sua reclamacao" ng-minlength="20"  required></textarea>
+                </label>
+                <br>
+                <button class="button button-block button-stable">
+                    Anexar arquivos
+                </button>
+            </div>
+            <button ng-disabled="novoCasoForm.$invalid" class="submit button button-block button-positive">
+                Enviar
+        </button>
+            </form>
+    </ion-content>
+</ion-view> 

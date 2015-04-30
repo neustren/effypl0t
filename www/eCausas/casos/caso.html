@@ -1,0 +1,57 @@
+
+<ion-view  view-title="caso.Titulo">
+    <ion-content>
+
+    <div class="list">
+
+        <div class="item item-avatar">
+            <img src="/img/cliente.png" width="42" height="42" >
+            <p>
+                <h2>{{caso.NomeUsuario}}<i class="icon icon-right ion-person"></i></h2>
+                <a class="subdued">(21) 99695 8555</a>
+            </p>
+            <a class="subdued">l.skywalker@rebelarmy.cor</a>
+        </div>
+        <div  class="item item-avatar">
+            <img src="/img/advogado.png" width="42" height="42" >
+            <p>
+            <h2>Mestre Yoda <i class="icon icon-right ion-briefcase"></i></h2>
+            <!--<a class="subdued">(21) 99695 0733</a>
+            </p>
+            <a class="subdued">yodamestre@Kashyyyk.un</a>-->
+
+        </div>
+    <div class="item item-body">
+
+        <h2>{{caso.Reu}}</h2>
+        <h2>{{caso.Titulo}}</h2>
+        <p>
+            {{caso.Descricao}}
+
+        </p>
+    </div>
+
+    </div>
+    </ion-content>
+
+    
+    <ion-footer-bar style="margin: 0; padding: 0; border: 0">
+    <div  class="item tabs tabs-secondary tabs-icon-top tabs-stable">
+        <a class="tab-item" href="#">
+            <i class="icon ion-clock"></i>
+            Processo
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-folder"></i>
+            Provas
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-chatboxes"></i>
+            Conversar
+        </a>
+    </div>
+    </ion-footer-bar>
+
+
+</ion-view>
+

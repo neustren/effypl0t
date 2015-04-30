@@ -1,0 +1,54 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item class="item-icon-left" nav-clear menu-close>
+        <i class="icon ion-home"></i>In&iacute;cio
+      </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/novoCaso">
+          <i class="icon ion-compose"></i>Escrever Caso
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/casos">
+          <i class="icon ion-filing" ></i>Meus casos
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close>
+          <i class="icon ion-person"></i>Login
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/registrarUsuario">
+            <i class="icon ion-person-add"></i>Registrar
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close>
+          <i class="icon ion-trophy"></i>Meu ranking
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close>
+          <i class="icon ion-settings"></i>Configura&#231;&#245;es 
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close>
+          <i class="icon ion-help"></i>Ajuda
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close>
+          <i class="icon ion-information"></i>Sobre n&#243;s
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ng-clic="ionic.Platform.exitApp()">
+          <i class="icon ion-close"></i>Sair
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

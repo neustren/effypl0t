@@ -1,0 +1,31 @@
+<ion-view view-title="Registrar Conta">
+    <ion-content>
+        <form name="registro" ng-submit="cadastrar()" novalidate>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Nome:</span>
+                    <input name="nome" ng-model="nome" ng-model-options="{ getterSetter: true, allowInvalid: true }" placeholder="pelo menos um sobrenome" type="text" required ng-minlength="8" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Celular:</span>
+                    <input ng-model="Usuario.Telefone" placeholder="digite um telefone v&#225;lido" type="text" required ng-pattern="/^[0-9\(\)\-]+$/" ng-minlength="8" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label item-stacked-label">E-mail:</span>
+                    <input type="email" ng-model="Usuario.Email" type="email" placeholder="digite aqui um e-mail" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label item-stacked-label">Senha:</span>
+                    <input ng-model="Usuario.Senha" type="password" placeholder="digite uma senha" />
+                </label>
+                <button ng-disabled="registro.$invalid" type="submit" class="button button-block button-calm">
+                    Confirmar
+                </button>
+            </div>
+        </form>
+        <div class="container">
+            <div class="fb-icon-bg"></div>
+            <div class="fb-bg"></div>
+        </div>
+    </ion-content>
+</ion-view>

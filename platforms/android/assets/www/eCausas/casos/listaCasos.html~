@@ -1,0 +1,36 @@
+<ion-view view-title="Lista de Casos">
+  
+    <ion-content>
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" placeholder="Search">
+        </label>
+
+
+        <ion-list>
+
+            <ion-item ng-repeat="caso in casos" class="item-remove-animate">
+                <div class="row">
+                    <div class="col col-center">
+                        <p>
+                            <b>Autor: </b>{{caso.NomeUsuario}}
+                        </p>
+                        <p>
+                            <b>R&#233;u: </b>{{caso.Reu}}
+                        </p>
+                    </div>
+                    <div class="col-20 col-center">
+                        <p>{{caso.DataInclusao|date:"dd/MM"}}</p>
+                        <p style="color:white">. </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-100 col-center">
+                        <p style="font-style: italic">{{caso.Titulo}}</p>
+                    </div>
+                </div>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

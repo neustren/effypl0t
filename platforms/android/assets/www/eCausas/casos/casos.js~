@@ -1,0 +1,23 @@
+﻿angular.module("CasosControllers", ["ArautoSvc"])
+    .controller("casosRender", function ($scope, Arauto) {
+        $scope.casoVazio = { Reu: "", NomeUsuario: "Anencefalo", Descricao: "", UsuarioID: "666", Titulo: "", DataInclusao: "" };
+
+	$scope.novoCaso=$scope.casoVazio;
+	
+        $scope.casos = [];
+
+	$scope.atualizarCasos=function(x) {
+	    for(var i=0;i<x.rows.length;i++)
+	    {
+		$scope.casos.push(x.rows.item(i));
+	    }
+	};
+
+	Arauto.puxarCasos($scope.atualizarCasos);
+	
+	$scope.cadastrarCaso=function () {
+	    $scope.novoCaso.DataInclusao=new Date();
+	    Arauto.inserirCaso($scope.novoCaso);
+	    //$scope.novoCaso=$scope.casoVazio;
+	};
+        });

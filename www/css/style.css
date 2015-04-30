@@ -1,0 +1,99 @@
+@font-face {
+	font-family: Helvetica Neue;
+	src: url('fonts/HelveticaNeue.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Helvetica Neue;
+	src: url('fonts/HelveticaNeue-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: Helvetica Neue;
+	src: url('fonts/HelveticaNeue-Italic.otf') format('opentype');
+    font-style: italic;
+}
+
+@font-face {
+	font-family: Helvetica Neue;
+	src: url('fonts/HelveticaNeue-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+	font-family: HelveticaNeue-Light;
+	src: url('fonts/HelveticaNeue-Light.otf') format('opentype');
+}
+
+@font-face {
+	font-family: HelveticaNeue-Light;
+	src: url('fonts/HelveticaNeue-LightItalic.otf') format('opentype');
+    font-style: italic;
+}
+
+/* Link styles */
+
+/* Styles for buttons container */
+.container {
+    margin: 10px 0 0 0px;
+    position: relative;
+    top: 110%;
+    left:20%;
+}
+
+/* Facebook */
+.fb-icon-bg {
+    background: #354f88;
+    height: 37px;
+    margin: 0 0 -37px 0;
+    width: 41px;
+}
+
+.fb-icon-bg:after {
+    content: url(../img/fb-icon.png);
+    display: block;
+    padding: 9px 10px 5px 15px;
+}
+
+.fb-bg {
+    background: #3b5998;
+    display: block;
+    height: 37px;
+    margin: 0 0 10px 41px;
+    width: 200px;
+}
+
+.fb-bg:after {
+    color: #fff;
+    content: "entrar com facebook";
+    font-family: 'Helvetica Neue', sans-serif;
+    height: 37px;
+    left: 8%;
+    position: relative;
+    text-transform: uppercase;
+    top: 22%;
+    width: 41px;
+}
+
+.fb-bg:hover{
+    cursor: pointer;
+}
+
+.fb-bg:active{
+    background: #354f88;
+}
+
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5px 0 0;
+}
+.container1 button {
+    position: relative;
+    margin: 0 0 10px 10px;
+}
+
