@@ -11,7 +11,7 @@
         //alert('AMEM');
 
 
-       // openFB.init({ appId: "890067351046241" });
+        openFB.init({ appId: "890067351046241" });
     }
 
         //  if (window.cordova.platformId === "browser") {

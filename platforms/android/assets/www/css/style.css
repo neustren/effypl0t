@@ -1,39 +1,81 @@
 @font-face {
 	font-family: Helvetica Neue;
-	src: url('fonts/HelveticaNeue.otf') format('opentype');
+	src: url('../fonts/HelveticaNeue.otf') format('opentype');
 }
 
 @font-face {
 	font-family: Helvetica Neue;
-	src: url('fonts/HelveticaNeue-Bold.otf') format('opentype');
+	src: url('../fonts/HelveticaNeue-Bold.otf') format('opentype');
     font-weight: bold;
 }
 
 @font-face {
 	font-family: Helvetica Neue;
-	src: url('fonts/HelveticaNeue-Italic.otf') format('opentype');
+	src: url('../fonts/HelveticaNeue-Italic.otf') format('opentype');
     font-style: italic;
 }
 
 @font-face {
 	font-family: Helvetica Neue;
-	src: url('fonts/HelveticaNeue-BoldItalic.otf') format('opentype');
+	src: url('../fonts/HelveticaNeue-BoldItalic.otf') format('opentype');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
 	font-family: HelveticaNeue-Light;
-	src: url('fonts/HelveticaNeue-Light.otf') format('opentype');
+	src: url('../fonts/HelveticaNeue-Light.otf') format('opentype');
 }
 
 @font-face {
 	font-family: HelveticaNeue-Light;
-	src: url('fonts/HelveticaNeue-LightItalic.otf') format('opentype');
+	src: url('../fonts/HelveticaNeue-LightItalic.otf') format('opentype');
     font-style: italic;
 }
 
-/* Link styles */
+/* Chat styles */
+.messages {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.messages li {
+	display:block;
+	clear:both;
+	max-width:50%;
+	margin:0 0 1rem 0;
+	padding:0;
+}
+
+.messages li:nth-child(even) {
+	float:right;
+}
+
+.messages li:nth-child(even) img {
+	float:right;
+}
+
+.messages p {
+	border-radius:.75rem;
+	background:#e6e5eb;
+	color:#383641;
+	padding:.6875rem;
+	margin:0;
+	font-size:.875rem;
+}
+
+.messages li:nth-child(even) p {
+	background:#158ffe;
+	color:#fff;
+}
+
+.messages img {
+	display:block;
+	max-width:65%;
+	border-radius:.75rem;
+}
+
 
 /* Styles for buttons container */
 .container {

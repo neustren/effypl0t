@@ -31,7 +31,7 @@
 
     })
 
- .service('Autenticador', function ($ionicModal, $timeout, Arauto) {
+ .service('Autenticador', function (Arauto) {
 
         this.loginData = { email: "", senha: "" };
 
@@ -68,33 +68,4 @@
          };
      }
 
-     // Create the login modal that we will use later
-     $ionicModal.fromTemplateUrl('/eCausas/usuarios/login.html', {
-         scope: $scope
-     }).then(function (modal) {
-         this.modal = modal;
-     });
-
-     // Triggered in the login modal to close it
-     this.closeLogin = function () {
-         this.modal.hide();
-     };
-
-     // Open the login modal
-     this.login = function () {
-         this.modal.show();
-     };
-
-     // Perform the login action when the user submits the login form
-     this.doLogin = function () {
-         console.log('Doing login', $scope.loginData);
-
-         // Simulate a login delay. Remove this and replace with your login
-         // code if using a login system
-         Arauto.userLogin(loginData);
-         $timeout(function () {
-             this.closeLogin();
-         }, 0);
-         
-     };
  });

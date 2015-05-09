@@ -2,7 +2,7 @@
   <ion-header-bar>
     <h1 class="title">Login</h1>
     <div class="buttons">
-      <button class="button button-clear" ng-click="Autenticador.closeLogin()">Close</button>
+      <button class="button button-clear" ng-click="closeLogin()">Fechar</button>
     </div>
   </ion-header-bar>
   <ion-content>
@@ -10,11 +10,11 @@
       <div class="list">
         <label class="item item-input">
           <span class="input-label">E-mail</span>
-          <input type="text" ng-model="Autenticador.loginData.email">
+          <input type="text" ng-model="loginData.email">
         </label>
         <label class="item item-input">
           <span class="input-label">Senha</span>
-            <input type="password" ng-model="Autenticador.loginData.senha">
+            <input type="password" ng-model="loginData.senha">
         </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Log in</button>
@@ -26,7 +26,7 @@
       <button class="button button-stable" href="#/app/registrar">Cadastrar</button>
     </div>
 
-      <div ng-click="Autenticador.fbLogin()" class="container">
+      <div ng-click="fbLogin()" class="container">
           <div class="fb-icon-bg"></div>
           <div class="fb-bg"></div>
           <!--<div class="twi-icon-bg"></div>

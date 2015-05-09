@@ -5,76 +5,90 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-angular.module('eCausasApp', ["ionic","ArautoSvc", "CasosControllers", "UsuarioControllers"])
-    .config(function($stateProvider, $urlRouterProvider) {
-        $stateProvider
-	    .state("app", {
-		url:"/app",
-		abstract:"true",
-		templateUrl: "ecausas/app/menu.html"
-	    })
-            .state("app.casos", {
-                url: "/casos",
+angular.module('eCausasApp', ["ionic", "ArautoSvc", "CasosControllers", "UsuarioControllers", "MenuControllers", "Chat"])
+    .config(function ($stateProvider, $urlRouterProvider) {
+	$stateProvider
+	
+		.state("app", {
+		url: "/app",
+		abstract: "true",
+		templateUrl: "ecausas/app/menu.html",
+		controller: "MenuController"
+	})
+		.state("app.casos", {
+		url: "/casos",
 		views:
 		{
-		    "menuContent":
-		    {
-			templateUrl: "eCausas/casos/listaCasos.html",
-			controller: 'casosRender'
-		    }
+			"menuContent":
+			{
+				templateUrl: "eCausas/casos/listaCasos.html",
+				controller: 'casosRender'
+			}
 		}
-            })
-            .state("app.casoView", {
-                url: "/casoView/:casoID",
+	})
+		.state("app.casoView", {
+		url: "/casoView/:casoID",
 		views:
 		{
-		    "menuContent":
-		    {
-			templateUrl: "eCausas/casos/caso.html",
-			controller: "casoViewCtrl"
-		    }
+			"menuContent":
+			{
+				templateUrl: "eCausas/casos/caso.html",
+				controller: "casoViewCtrl"
+			}
 		}
-            })
-	    .state("app.novoCaso", {
-                url: "/novoCaso",
+	})
+		.state("app.novoCaso", {
+		url: "/novoCaso",
 		views:
 		{
-		    "menuContent":
-		    {
-			templateUrl: "eCausas/casos/novoCaso.html",
-			controller: 'casosRender'
-		    }
+			"menuContent":
+			{
+				templateUrl: "eCausas/casos/novoCaso.html",
+				controller: 'casosRender'
+			}
 		}
-            })
-	    .state("app.registrarUsuario",{
-		url:"/registrarUsuario",
+	})
+		.state("app.registrarUsuario", {
+		url: "/registrarUsuario",
 		views:
 		{
-		    "menuContent":
-		    {
-			templateUrl: "eCausas/usuarios/registrar.html",
-			controller: 'perfilController'
-		    }
+			"menuContent":
+			{
+				templateUrl: "eCausas/usuarios/registrar.html",
+				controller: 'perfilController'
+			}
 		}
-	    });
+	})
+	
+		.state("app.chat", {
+		url: "/chat",
+		views:
+		{
+			"menuContent":
+			{
+				templateUrl: "eCausas/chat/chat.html",
+				controller: 'chatController'
+			}
+		}
+	});
 
-        // if none of the above states are matched, use this as the fallbac
-        $urlRouterProvider.otherwise('/app/casos');
+	// if none of the above states are matched, use this as the fallbac
+	$urlRouterProvider.otherwise('/app/casos');
 
-    })
+})
 
-    .run(function($ionicPlatform) {
-        $ionicPlatform.ready(function() {
-            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-            // for form inputs)
-            /* if (window.cordova && window.cordova.plugins.Keyboard) {
+    .run(function ($ionicPlatform) {
+	$ionicPlatform.ready(function () {
+		// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+		// for form inputs)
+		/* if (window.cordova && window.cordova.plugins.Keyboard) {
 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 }  */
 
-            if (window.StatusBar) {
-                // org.apache.cordova.statusbar required
-                StatusBar.styleDefault();
-            }
-        });
-    });
+		if (window.StatusBar) {
+			// org.apache.cordova.statusbar required
+			StatusBar.styleDefault();
+		}
+	});
+});
 

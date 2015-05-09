@@ -5,6 +5,8 @@
  * @version 1.0.2
  */
 
+//TODO: add localstorage wrapper
+
 angular.module("angular-websql", []).factory("$webSql", ["$q",
 	function ($q) {
 	    return {
