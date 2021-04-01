@@ -1,2 +1,2 @@
-# effypl0t
-Effy Workshop
+# Effy workshop
+Training ground for git.
